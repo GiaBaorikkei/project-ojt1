@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img style="width: 250px; height: 30px;" src="https://www.honda.com.vn/images/logo_new.png?v=20240311" alt="HONDA Việt Nam"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-right" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="navItem">
+                <a href="./cart.html" id="cart-btn" class="material-symbols-outlined">shopping_cart <div id="itemInCart" class="itemInCart">9</div></a>
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sản phẩm
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./utils/xeSo.html">Xe số</a></li>
+                  <li><a class="dropdown-item" href="./utils/xeGa.html">Xe tay ga</a></li>
+                  <li><a class="dropdown-item" href="./utils/xeCon.html">Xe côn tay</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="nameLogin" href="./pages/register.html">Đăng ký</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="logOut" href="./pages/login.html">Đăng nhập</a>
+              </li>  
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://cdn.honda.com.vn/motorbikes/November2023/kNVJB3JFDcUks35GBavy.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://cdn.honda.com.vn/motorbikes/November2023/up2hFvPM9db0M1N5m3fY.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://cdn.honda.com.vn/motorbikes/November2023/cCycimkfsC0yPedFZ7fO.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div  class="listSp">
+        <h1 style="display: flex; padding-left: 150px;align-items: center;font-weight: 400;">Danh sách sản phẩm</h1>
+      </div>
+      <div class="listCard"id="renderList">
+        <!-- <div  class="card" style="width: 18rem;">
+          <img src="https://cdn.honda.com.vn/motorbike-strong-points/November2023/3se57aukvnCXrxyT9dFp.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Sh mode 125</h5>
+            <p class="card-text">Giá từ: 50.000.000 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div> -->
+        <!-- <div class="card" style="width: 18rem;">
+          <img src="https://cdn.honda.com.vn/motorbike-versions/November2022/PVv5bAR0a69T7Y2GTvQ9.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Vision</h5>
+            <p class="card-text">Giá từ: 37.000.000 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="https://cdn.honda.com.vn/motorbike-versions/May2022/UDvt2b8oUaEjVwt3fY1q.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Air Blade 160/125</h5>
+            <p class="card-text">Giá từ: 40.000.000 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="https://cdn.honda.com.vn/motorbikes/December2021/PxbOtPG619Vte84CQHPg.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">LEAD</h5>
+            <p class="card-text">Giá từ: 45.000.000 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="https://cdn.honda.com.vn/motorbike-versions/November2023/OXbW3Fw1ZdwkbC3Avfzj.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Vario</h5>
+            <p class="card-text">Giá từ: 37.000.000 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="https://yamaha-motor.com.vn/wp/wp-content/uploads/2023/07/Janus-standard-Red-Metallic4-2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Janus</h5>
+            <p class="card-text">Giá từ: 32.000.000 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="https://cdn.honda.com.vn/motorbike-versions/March2023/j37sLOXkDQsdX7nnBTOj.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Blade 2023</h5>
+            <p class="card-text">Giá từ: 27.000.000 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="https://cdn.honda.com.vn/motorbike-strong-points/January2024/NkQsGaNT0xrg3F02CIDJ.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Future 125 FI</h5>
+            <p class="card-text">Giá từ: 23.000.00 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="https://cdn.honda.com.vn/motorbike-versions/November2023/GZxuAoXd6O0zJQCqeGAy.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Wave RSX</h5>
+            <p class="card-text">Giá từ: 17.000.000 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="https://cdn.honda.com.vn/motorbike-versions/July2023/V1JxzlIUxWuk5RLW8fYF.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Wave Alpa 110</h5>
+            <p class="card-text">Giá từ: 18.000.000 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="https://yamaha-motor.com.vn/wp/wp-content/uploads/2022/08/Sirius-Black-Disk-004.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Sirius FI</h5>
+            <p class="card-text">Giá từ: 23.000.000 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="https://yamaha-motor.com.vn/wp/wp-content/uploads/2023/03/Jupiter-Mat-Black-004-1.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Jupiter FI</h5>
+            <p class="card-text">Giá từ: 25.000.000 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="https://cdn.honda.com.vn/motorbike-versions/December2023/6kdmcGZvwe1TyMeDSswx.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Winner X 2024</h5>
+            <p class="card-text">Giá từ: 46.160.000 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="https://cdn.honda.com.vn/motorbike-versions/April2023/2pSqu65qdei9HLkHfOtJ.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CBR150R</h5>
+            <p class="card-text">Giá từ: 72.290.000 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="https://content2.kawasaki.com/ContentStorage/KMV/Products/4915/cc471aa1-aa2d-4126-92c8-9ca6b9c6c005.png?w=675" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">NINJA H2R</h5>
+            <p class="card-text">Giá từ: 2.000.000.000 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="https://i1-vnexpress.vnecdn.net/2023/04/13/BMW-S1000RR-VNE-2-1576900579-jpeg.jpg?w=900&h=0&q=100&dpr=1&fit=crop&s=1riR3ldSIPf_SEXx4UMv1Q" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BMW Motorrad S 1000 RR</h5>
+            <p class="card-text">Giá từ: 700.000.000 VNĐ</p>
+            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+          </div>
+        </div> -->
+      </div>
+      <div class="infor">
+        <div class="infor-top">
+          <div>
+            <div>
+              <i class="fa-solid fa-user-shield"></i>
+            </div>
+            <b>MUA SẮN AN TOÀN</b>
+            <p>Bảo đảm an tòan khi mua sắm</p>
+          </div>
+          <div>
+            <div>
+              <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <b>THANH TOÁN ĐA DẠNG</b>
+            <p>Thuận tiện mua sắm</p>
+          </div>
+          <div>
+            <div>
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <b>HỖ TRỢ 24/7</b>
+            <p>Tư vấn trực tiếp</p>
+          </div>
+          <div>
+            <div>
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <b>GIAO HÀNG TẬN NHÀ</b>
+            <p>Miễn phí đơn hàng trên 50.000.000 VNĐ</p>
+          </div>
+        </div>
+        
+        <div class="infor-last">
+          <div>
+            <b>CHUỖI CỬA HÀNG PHÂN PHỐI XE MÁY</b> <br>
+            <i class="fa-solid fa-location-dot"></i>
+            <i>Cầu Giấy, Hà Nội</i> <br>
+            <i class="fa-solid fa-location-dot"></i>
+            <i>Thủ Đức, Hồ Chí Minh</i> <br>
+            <i class="fa-solid fa-location-dot"></i>
+            <i>Vinh, Nghệ An</i>
+          </div>
+          <div>
+            <i class="fa-solid fa-phone-volume"></i>
+            <i>1800 IQKA</i>
+          </div>
+          <div>
+            <i class="fa-solid fa-envelope"></i>
+            <i>xemaychat@gmail.com</i>
+          </div>
+          <div>
+            <i class="fa-brands fa-facebook"></i>
+            <i>xe chat</i>
+          </div>
+        </div>
+      </div>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+    
+</body>
+</html>

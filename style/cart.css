@@ -1,0 +1,83 @@
+.itemInCart {
+    position: absolute;
+    color: white !important;
+    background-color: red;
+    height: 15px !important;
+    width: 15px !important;
+    font-size: 7px !important;
+    font-weight: 600 !important;
+    line-height: 15px !important;
+    border: 0px solid white !important;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block !important;
+    left: 14px;
+    bottom: 17px;
+  }
+#cart-btn {
+    position: relative;
+  }
+  .navItem {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .infor {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(grey, #e1e6e1);
+    margin-top: 50px;
+}
+.infor-top {
+    display: flex;
+    gap: 180px;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+.infor-last {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 80px;
+    gap: 10px;
+}
+.sl {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.bt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    border-radius: 50%;
+    border: 0px solid grey;
+    font-size: 15px;
+    height: 20px;
+    width: 20px;
+}
+.delete {
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    border: 0px solid red;
+}
+.imgCart{
+    width: 80px;
+    height: 40px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center; /* Cân giữa nội dung trong các ô của bảng */
+    padding: 8px;
+    vertical-align:middle ;
+}
+    

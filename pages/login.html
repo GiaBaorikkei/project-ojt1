@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/login.css">
+</head>
+<body>
+    <!-- Trang đăng nhập -->
+    <div class="container">
+        <h3 class="form-heading">Đăng nhập </h3>
+        <form class="form">
+            <div class="form-group">
+                <label class="form-label" for="">Tên đăng nhập (email):</label> 
+                <input id="userNameInput" class="input" type="text">
+                <p style="color: red;margin-top: 5px;" id="messUser"></p>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="">Mật khẩu:</label> 
+                <input id="passInput" class="input" type="text">
+                <p style="color: red;margin-top: 5px;" id="messPass"></p>
+            </div>
+            <div class="tow">
+                <button onclick="login()" class="button" type="button" value="Đăng nhập">Đăng nhập</button>
+                <p style="margin-left: 30px;" href="">Bạn chưa có tài khoản? <a style="margin: left 30px;" href="../pages/register.html">Đăng ký</a></p>
+            </div>
+        </form>
+       </div>
+       <a href="../index.html"></a>
+       <script src="../js/login.js"></script>
+</body>
+</html>

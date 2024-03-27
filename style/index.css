@@ -1,0 +1,103 @@
+/* media queries */
+@media (max-width: 991px) {
+    html {
+      font-size: 55%;
+    }
+    .header {
+      padding: 2rem;
+    }
+    section {
+      padding: 2rem 9%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header .navbar {
+      position: absolute;
+      top: 110%;
+      right: 2rem;
+      width: 30rem;
+      box-shadow: var(--box-shadow);
+    }
+  }
+.navbar-right {
+    margin-left: 100px;
+}
+.infor {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(grey, #e1e6e1);
+    margin-top: 50px;
+}
+.infor-top {
+    display: flex;
+    gap: 180px;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+.infor-last {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 80px;
+    gap: 10px;
+}
+.row{
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+   margin-left: 10px !important;
+}
+.usernameLabel{
+    margin-top: 8px;
+}
+.listCard {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card-img-top {
+    width: 17rem;
+    height: 180px;
+}
+.card-title {
+    color: red;
+    font-weight: 500;
+}
+.listSp {
+    font-weight: 700;
+    background-image: linear-gradient(rgb(216, 51, 51),red);
+    color: white;
+    width: 100%;
+    height: 60px;
+}
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.itemInCart {
+  position: absolute;
+  color: white !important;
+  background-color: red;
+  height: 15px !important;
+  width: 15px !important;
+  font-size: 7px !important;
+  font-weight: 600 !important;
+  line-height: 15px !important;
+  border: 0px solid white !important;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block !important;
+  left: 14px;
+  bottom: 17px;
+}
+#cart-btn {
+  position: relative;
+}
+.card-text {
+  color: grey;
+  font-weight: 300;
+}

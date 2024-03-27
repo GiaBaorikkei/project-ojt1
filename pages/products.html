@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/products.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+    <h3 id="menu" class="w3-bar-item"><span class="material-symbols-outlined">menu</span>Menu</h3>
+    <div class="listMenu">
+        <span class="material-symbols-outlined">home</span>
+        <a href="../admin.html" class="w3-bar-item w3-button">Home</a>
+    </div>
+    <div class="listMenu">
+        <span class="material-symbols-outlined">account_circle</span>
+        <a href="../pages/users.html" class="w3-bar-item w3-button">Người dùng</a>
+    </div>
+    <div class="listMenu">
+        <span class="material-symbols-outlined">inventory_2</span>
+        <a href="../pages/products.html" class="w3-bar-item w3-button">Sản phẩm</a>
+    </div>
+    <div class="listMenu">
+        <span class="material-symbols-outlined">logout</span>
+        <a href="../admin.html" class="w3-bar-item w3-button">Đăng xuất</a>
+    </div>
+  </div>
+  
+  <!-- Page Content -->
+  <div style="margin-left:25%">
+    
+  <div class="w3-container w3-teal">
+    <h1 class="head"><span id="admin" class="material-symbols-outlined">admin_panel_settings</span>ADMIN</h1>
+  </div>
+  
+  <!-- <img src="img_car.jpg" alt="Car" style="width:100%"> -->
+  
+  <div class="w3-container">
+  <h2>Thông tin sản phẩm</h2>
+  <div class="form">
+    <div class="formBD">
+        <label class="label" for="">Loại xe:</label>
+        <input class="input" type="text" name="" id="type">
+    </div>
+    <div class="formBD">
+        <label class="label" for="">Tên sản phẩm:</label>
+        <input id="name" class="input" type="text">
+    </div>
+    <div class="formBD">
+        <label class="label" for="">Giá sản phẩm:</label>
+        <input id="price" class="input" type="text">
+    </div>
+    <div class="formBD">
+        <label class="label" for="">Hình ảnh sản phẩm:</label>
+        <input id="img" class="input" type="text">
+    </div>
+    <div class="formBD">
+        <label class="label" for="">Mô tả sản phẩm:</label>
+        <textarea name="" id="description" cols="50" rows="3"></textarea>
+    </div>
+    <button onclick="saveProduct()" id="btn"  class="bt">Lưu lại</button>
+  </div>
+  </div>
+<div class="search">
+    <div>
+        <label class="lbSearch" for="">Tìm kiếm sản phẩm:</label>
+        <input id="search" class="input" type="search">
+    </div>
+    <button onclick="searchProduct()" class="btSR">Tìm kiếm</button>
+</div> 
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Loại xe</th>
+            <th>Tên sản phẩm</th>
+            <th>Hình ảnh</th>
+            <th>Giá sản phẩm</th>
+            <th>Chức năng</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+        <!-- <tr>
+            <td>1</td>
+            <td>001</td>
+            <td>Sh mode 125i</td>
+    imgAdmin        <td><img class="" src="https://cdn.honda.com.vn/motorbike-strong-points/November2023/3se57aukvnCXrxyT9dFp.png" class="card-img-top" alt="..."></td>
+            <td>57.000.000 VNĐ</td>
+            <td>
+                <div class="fction">                    
+                    <button class="btFc">Sửa</button><button class="btFc">Xóa</button>
+                </div>
+            </td>
+        </tr> -->
+    </tbody>
+</table>
+  </div>
+</body>
+<script src="../js/products.js"></script>
+</html>
