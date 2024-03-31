@@ -30,3 +30,15 @@ function nameLogin() {
 }
 
 nameLogin();
+ //So luong san pham trong gio hang
+ let nameUser = JSON.parse(localStorage.getItem("nameUser"))
+let cart = JSON.parse(localStorage.getItem("cart_"+nameUser))
+if (cart && cart.length > 0) {
+    // Lấy số lượng sản phẩm trong giỏ hàng
+    let itemCount = cart.length;
+    // Đặt số lượng vào phần tử div
+    document.getElementById("itemInCart").textContent = itemCount;
+} else {
+    // Nếu giỏ hàng không tồn tại hoặc rỗng, hiển thị số lượng là 0
+    document.getElementById("itemInCart").textContent = "0";
+}

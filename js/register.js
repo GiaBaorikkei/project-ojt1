@@ -25,7 +25,8 @@ function register() {
         email: email,
         phone: phone,
         password: passWork,
-        
+        status: "Không hoạt động",
+        action:"1",
     };
 
     users.push(newUser);

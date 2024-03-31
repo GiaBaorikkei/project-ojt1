@@ -5,8 +5,15 @@ function nameLogin() {
     } else {
         document.getElementById("nameLogin").innerText = namUserCurrent;
         document.getElementById("logOut").innerText = "Đăng xuất";
+        document.getElementById("logOut").addEventListener("click", function() {
+            localStorage.removeItem("nameUser");
+            // Để chắc chắn rằng sau khi đăng xuất, cập nhật lại giao diện
+            document.getElementById("nameLogin").innerText = ""; // Xóa tên đăng nhập
+            document.getElementById("logOut").innerText = ""; // Xóa nút "Đăng xuất"
+        });
     }
 }
+
 
 nameLogin();
 
@@ -258,21 +265,21 @@ function addToCart(){
 //                   type: 3,
 //              },
 // ]
-let typeList = [
-    {
-        id: 1,
-        name: "Xe tay ga"
-    },
-    {
-        id:2,
-        name: "Xe số",
-    },
-    {
-        id:3,
-        name: "Xe tay côn",
-    }
-]
-localStorage.setItem("typeList",JSON.stringify(typeList));
+// let typeList = [
+//     {
+//         id: 1,
+//         name: "Xe tay ga"
+//     },
+//     {
+//         id:2,
+//         name: "Xe số",
+//     },
+//     {
+//         id:3,
+//         name: "Xe tay côn",
+//     }
+// ]
+// localStorage.setItem("typeList",JSON.stringify(typeList));
 // localStorage.setItem("products", JSON.stringify(productList));
 
 function renderProduct(){
@@ -293,3 +300,16 @@ function renderProduct(){
      document.getElementById("renderList").innerHTML = element;
 }
 renderProduct();
+
+ //So luong san pham trong gio hang
+ let nameUser = JSON.parse(localStorage.getItem("nameUser"))
+let cart = JSON.parse(localStorage.getItem("cart_"+nameUser))
+if (cart && cart.length > 0) {
+    // Lấy số lượng sản phẩm trong giỏ hàng
+    let itemCount = cart.length;
+    // Đặt số lượng vào phần tử div
+    document.getElementById("itemInCart").textContent = itemCount;
+} else {
+    // Nếu giỏ hàng không tồn tại hoặc rỗng, hiển thị số lượng là 0
+    document.getElementById("itemInCart").textContent = "0";
+}

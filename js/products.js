@@ -5,8 +5,9 @@ function saveProduct(){
     let price = document.getElementById("price").value;
     let image = document.getElementById("img").value;
     let description = document.getElementById("description").value;  
-    
+    type = parseInt(type);
     let obj = {
+        id: products.length+1,
         type: type,
         name: name,
         price:price,
@@ -134,5 +135,4 @@ function searchProduct(){
     }
     document.getElementById("tbody").innerHTML = element;
 }
-
 
